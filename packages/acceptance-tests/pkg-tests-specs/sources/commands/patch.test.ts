@@ -3,6 +3,7 @@ import {Filename, npath, ppath, xfs} from '@yarnpkg/fslib';
 describe(`Commands`, () => {
   describe(`patch`, () => {
     test(
+      jest.setTimeout(160000)
       `it should restart the patch from scratch on subsequent patches by default`,
       makeTemporaryEnv({
         dependencies: {
